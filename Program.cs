@@ -10,11 +10,7 @@ namespace GraphQL_Dotnet
     {
         public static async Task Main(string[] args)
         {
-            var schema = Schema.For(@"
-      type Query {
-        hello: String
-      }
-    ");
+            var schema = Schema.For(@"type Query { hello: String}");
 
             var json = await schema.ExecuteAsync(_ =>
             {
